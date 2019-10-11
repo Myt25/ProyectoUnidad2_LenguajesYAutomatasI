@@ -64,6 +64,14 @@ var busquedatit = document.getElementById("etiquetatitulo").value;
 var encontrar = busquedatit.match(/(?!<title>)\w+(?=<\/title>)/gi);
 document.getElementById("tituloencontrado").innerHTML = encontrar;
 };
+
+function laEncriptacion()
+        {
+            var x = document.getElementById("palabras").value;
+            var encript = x.replace(/[aeiou]/ig, "*");
+            document.getElementById("encriptando").innerHTML = encript;
+            
+        };
   /*
 
 \/\*.*?\*\/ <-- REEMPLAZAR COMENTARIO
