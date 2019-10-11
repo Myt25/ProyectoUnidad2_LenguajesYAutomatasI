@@ -41,7 +41,17 @@ function mostrarcodigo(urlva) {
     }
 }
 
+function Reemplazar(){
+   var texto = document.getElementById("texto").value;
+   var texto_nuevo = texto.replace(/(https:)\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/, " La URL fue acortada por: https://www.ejemplo.com");
+   document.getElementById("reemplazotexto").innerHTML = texto_nuevo;
+};
 
+function reemplazocomentario(){
+  var coment = document.getElementById("borrarcomentario").value;
+  var coment2 = coment.replace(/(\/\*.*?\*\/)/g, "El comentario se ha reemplazado ");
+  document.getElementById("comentario").innerHTML = coment2;
+};
 
   /*
 
