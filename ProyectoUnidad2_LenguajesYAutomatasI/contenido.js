@@ -52,7 +52,18 @@ function reemplazocomentario(){
   var coment2 = coment.replace(/(\/\*.*?\*\/)/g, "El comentario se ha reemplazado ");
   document.getElementById("comentario").innerHTML = coment2;
 };
+function buscar(){
+    var str = document.getElementById("buscarIMG").value;
+    let txt = str.match(/([0-9-,_A-Za-z]+[.]+["jpg$"]+["png$"]+["gif$"])/g);
+    document.getElementById("mostrarextension").innerHTML = txt;
 
+};
+
+function titulox(){
+var busquedatit = document.getElementById("etiquetatitulo").value;
+var encontrar = busquedatit.match(/(?!<title>)\w+(?=<\/title>)/gi);
+document.getElementById("tituloencontrado").innerHTML = encontrar;
+};
   /*
 
 \/\*.*?\*\/ <-- REEMPLAZAR COMENTARIO
